@@ -1,5 +1,11 @@
 <h1>Jon's Portfolio</h1>
 
+{% load static %}
+
+<a href={% static 'portfolio/ResumeFeb22.pdf' %}>Resume</a>
+
+<img src={% static 'portfolio/jon_carson_sushi.jpg' %}>
+
 {% for project in projects %}
 
 <h2>{{ project.title }}</h2>
@@ -10,8 +16,5 @@
 {% if project.url %}
 <br><a href="{{ project.url }}">Link</a>
 {% endif %}
-
-
-
 
 {% endfor %}
